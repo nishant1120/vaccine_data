@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SearchForm from "./SearchForm.js";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="parent">
+        <div className="header">
+          <h1>Covid Vaccination Data ©Nishant Mishra</h1>
+        </div>
+        <SearchForm />
+        {/* <div className="footer">
+          Designed and Devloped by
+          <a
+            href="https://www.linkedin.com/in/nishant-kumar-mishra-8503a9122/"
+            target="_blank"
+            style={{ color: "white" }}
+            rel="noreferrer"
+          >
+            Nishant Mishra
+          </a>
+          and
+          <a
+            href="https://www.linkedin.com/in/prince-jain-148635187/"
+            target="_blank"
+            style={{ color: "white" }}
+            rel="noreferrer"
+          >
+            Prince jain
+          </a>
+        </div> */}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
