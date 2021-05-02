@@ -33,3 +33,9 @@
   height: 80%;
   width: 100%;
 }
+.list_parent span {
+  color: red;
+}
+#no0fdoses {
+  color: greenyellow;
+}

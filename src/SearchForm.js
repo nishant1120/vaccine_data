@@ -88,7 +88,13 @@ const SearchForm = () => {
   return (
     <div className="searchForm">
       <div>
-        <button onClick={() => setSearchType("PinCode")}>
+        <button
+          onClick={() => {
+            setSearchType("PinCode");
+            setError("");
+            setRenderVaccineHospitals(null);
+          }}
+        >
           Search By PinCode
         </button>
         <button
