@@ -7,7 +7,7 @@ const App = () => {
     <div className="App">
       <div className="parent">
         <div className="header">
-          <h1>Covid Vaccination Data ©Nishant Mishra</h1>
+          <div>Covid Vaccination Data ©Nishant Mishra</div>
         </div>
         <SearchForm />
         {/* <div className="footer">

@@ -2,6 +2,13 @@
   text-align: center;
   height: 100%;
   width: 100%;
+  margin:0 auto;
+}
+.header{
+  font-size: 24px;
+  font-weight: 700;
+  color:#000000;
+  padding:30px;
 }
 .parent {
   display: flex;
@@ -13,8 +20,107 @@
   right: 0;
   /* //background: grey; */
 }
+.buttonsearch{
+  padding-bottom: 10px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+.pinCode{
+  
+  padding:10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  background-color:#fffff2 ;
+  border-radius: 6px;
+  border:solid 2px
+
+}
+.datepicker{
+  padding:16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  background-color:#fffff2 ;
+  border:none !important;
+
+}
+
+.district{
+  
+  padding:10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  background-color:#fffff2 ;
+  border-radius: 6px;
+
+}
+
+.ip{
+  padding-right:20px;
+}
+
+
+.districtTitle{
+  
+  padding-right:8px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+
+}
+
+.submit{
+  
+  padding:10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  background-color:#fffff2 ;
+  border-radius: 6px;
+
+}
+.searchby{
+  padding:10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  background-color: honeydew ;
+  border-radius: 6px;
+
+}
+.nothing{
+  
+  padding:10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  background-color:#fffff2 ;
+  border-radius: 6px;
+}
+
+.error{
+  display:flex;
+  justify-content: center;
+  color:red;
+  padding:16px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.hospitalName{
+  padding:20px;
+  text-align:center;
+}
 .selected {
-  background-color: green;
+  background-color:#70f107;
+  
+  padding:10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  border-radius: 6px;
 }
 .footer {
   background-color: rgb(10, 4, 22);
@@ -32,10 +138,14 @@
   scroll-behavior: smooth;
   height: 80%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top:30px;
 }
 .list_parent span {
   color: red;
 }
 #no0fdoses {
-  color: greenyellow;
+  color:#09f81d;
+  font-size:18px !important;
 }

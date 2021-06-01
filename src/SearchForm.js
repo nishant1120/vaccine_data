@@ -88,8 +88,9 @@ const SearchForm = () => {
   return (
     <div className="searchForm">
       <div>
-        <button
-          onClick={() => {
+      <span class="buttonsearch" >
+        <button class="searchby"
+           onClick={() => {
             setSearchType("PinCode");
             setError("");
             setRenderVaccineHospitals(null);
@@ -97,7 +98,9 @@ const SearchForm = () => {
         >
           Search By PinCode
         </button>
-        <button
+        </span>
+        <span class="buttonsearch" >
+        <button class="searchby"
           onClick={() => {
             setSearchType("District");
             callStatesApi();
@@ -107,22 +110,30 @@ const SearchForm = () => {
         >
           Search By District
         </button>
+      </span>
       </div>
-      {searchType === "PinCode" ? (
-        <>
-          <input ref={pinRef} type="number" placeholder="pinCode" />
+      <div>
+        <div>    
           <DatePicker
             // type="date"
             onChange={onChangeDate}
             value={date}
             minDate={new Date()}
-          />
-          <button onClick={() => callVaccinApibypin()}>Submit</button>
+            className="datepicker"
+          /></div>
+
+      {searchType === "PinCode" ? (
+        <>
+        <span className="ip">
+          <input className="pinCode" ref={pinRef} type="number" placeholder="pinCode" />
+          </span>
+          <button className="submit" onClick={() => callVaccinApibypin()}>Submit</button>
         </>
       ) : searchType === "District" ? (
-        <div>
-          Disritcit
-          <select
+        <div >
+          <span className="districtTitle">Disritct:</span>
+          <span style={{paddingRight:"8px"}}>
+          <select className="district"
             value={selectedState}
             onChange={(e) => callDictircsAPi(e)}
             style={{ width: "250px" }}
@@ -140,7 +151,9 @@ const SearchForm = () => {
               </option>
             ))}
           </select>
-          <select
+          </span>
+          <span style={{paddingRight:"12px"}}>
+          <select className="district"
             value={selectedDistrict}
             onChange={(e) => {
               setSelectedDistrict(e.target.value);
@@ -150,7 +163,7 @@ const SearchForm = () => {
             }}
             style={{ width: "250px" }}
           >
-            <option value="Select Distict" selected disabled>
+            <option value="distrcit" selected disabled>
               Select Distirct
             </option>
             {DistirctState.map((stateEle, id) => (
@@ -163,16 +176,19 @@ const SearchForm = () => {
               </option>
             ))}
           </select>
-          <button onClick={() => callVaccinApibyDiscript()}>Submit</button>
+          </span>
+          <button className="submit" onClick={() => callVaccinApibyDiscript()}>Submit</button>
         </div>
       ) : null}
+      </div>
 
-      <div>{error}</div>
-      <button
+
+      <div className="error">{error}</div>
+      <button 
         className={eighteenPlusOn ? "selected" : "nothing"}
         onClick={() => setEighteeenPlusOn(!eighteenPlusOn)}
       >
-        SHow only 18-44
+        Show only 18-44
       </button>
       {eighteenPlusOn ? (
         <RenderHospitalsAbove18 hospitals={renderVaccineHospitals} />
